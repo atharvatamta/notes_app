@@ -43,44 +43,42 @@ const NoteForm = ({ notes, setNotes }) => {
       </button>
       {isFormVisible && (
         <form onSubmit={handleSubmit} className="mb-6">
-        <TextInput
-        name = "title"
-        label= "Title"
-        onChange = {handleChange}
-        value = {formData.title}
-        />
-         
+          <TextInput
+            name="title"
+            label="Title"
+            onChange={handleChange}
+            value={formData.title}
+          />
 
-            <SelectInput
-        label="Category"
-        name="category"
-        value={formData.category}
-        onChange={handleChange}
-        options={[
-          { value: "Work", label: "📂 Work" },
-          { value: "Personal", label: "🏠 Personal" },
-          { value: "Ideas", label: "💡 Ideas" },
-        ]}
-      />
+          <SelectInput
+            label="Category"
+            name="category"
+            value={formData.category}
+            onChange={handleChange}
+            options={[
+              { value: "Work", label: "📂 Work" },
+              { value: "Personal", label: "🏠 Personal" },
+              { value: "Ideas", label: "💡 Ideas" },
+            ]}
+          />
 
-      <SelectInput
-        label="Priority"
-        name="priority"
-        value={formData.priority}
-        onChange={handleChange}
-        options={[
-          { value: "High", label: "🔴 High" },
-          { value: "Medium", label: "🟠 Medium" },
-          { value: "Low", label: "🟢 Low" },
-        ]}
-      />
-         <TextAreaInput
-         label = "Description"
-         name= "description"
-         value= {formData.description}
-         onChange={handleChange}
-
-         />
+          <SelectInput
+            label="Priority"
+            name="priority"
+            value={formData.priority}
+            onChange={handleChange}
+            options={[
+              { value: "High", label: "🔴 High" },
+              { value: "Medium", label: "🟠 Medium" },
+              { value: "Low", label: "🟢 Low" },
+            ]}
+          />
+          <TextAreaInput
+            label="Description"
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+          />
           <button
             type="submit"
             className="bg-purple-500 w-full py-2 cursor-pointer rounded-lg shadow-lg text-white hover:bg-purple-600"

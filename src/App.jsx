@@ -12,5 +12,6 @@ const [notes,setNotes] = useState([])
     <NoteList notes= {notes}/>
   </div>);
 }
- 
 export default App;
+
+// add a delete button and create a function which will be passed up to the app.jsx containing global state and then filtering out the note using notee id
